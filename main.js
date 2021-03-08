@@ -8,9 +8,8 @@ Solution: This one has already been completed for you.
 
 */
 
-function test() {
- var string ="This Works!";
- return string;
+function test(){
+    return "This Works!"
 }
 
 
@@ -30,13 +29,11 @@ For example, the tests require that to complete this challenge, your function mu
 results on the index page in the browser.
 */
 
-
-
-
-
-
-
-
+function sum(arr){
+let sum = 0;
+arr.map((number)=> sum+= number);
+return sum;
+}
 
 /*
 ----------------------------------------
@@ -47,14 +44,17 @@ Write function named doubleLetters that will take a string and double every lett
 
 Example: if you pass it "abc" then it should return "aabbcc"
 */
+function doubleLetters(str){
+    let newString = "";
 
+    for(let i = 0 ; i < str.length; i++){
+        newString += str[i];
+        newString += str[i];
 
+    }
 
-
-
-
-
-
+    return newString;
+}
 
 
 /*
@@ -67,6 +67,9 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
+function doubleNumbers(arr){
+    return arr.map((number)=> number *2);
+}
 
 
 
@@ -89,8 +92,10 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
 
+function multiplyNumbers(arr, denominator) {
+    return arr.map((number) => number * denominator);
 
-
+}
 
 
 
@@ -111,7 +116,15 @@ NOTE: you can assume each input will be the same length
 */
 
 
+function interleave(arr1, arr2){
+    let resultarr = [];
+    for(let i =0; i < arr1.length; i++){
+        resultarr.push(arr1[i]);
+        resultarr.push(arr2[i]);
+    }
+    return resultarr;
 
+}
 
 
 
@@ -130,7 +143,14 @@ Write function named createRange that will take a number and a default value and
 Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "Hello", "Hello"]
 */
 
+function createRange(number, defaultValue){
+let returnArr = [];
+for(let i = 0 ; i < number ; i++){
+returnArr.push(defaultValue);
+}
+return returnArr;
 
+}
 
 
 
