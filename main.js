@@ -145,7 +145,12 @@ Example:
 If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "brown": 1, "fox": 2 }
 */
 
+function flipArray(array){
+    let obj = {};
+     array.forEach((curr, index) => obj[curr] = index);
 
+     return obj;
+}
 
 
 
