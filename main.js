@@ -13,7 +13,6 @@ function test(){
 }
 
 
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -28,11 +27,8 @@ For example, the tests require that to complete this challenge, your function mu
 0 if the input is empty. Please see the README file for an explanation of how to expand the test
 results on the index page in the browser.
 */
-
 function sum(arr){
-let sum = 0;
-arr.map((number)=> sum+= number);
-return sum;
+    return (arr.length !=0)? arr.reduce((acc, curr) => acc +curr) : 0;
 }
 
 /*
@@ -45,15 +41,7 @@ Write function named doubleLetters that will take a string and double every lett
 Example: if you pass it "abc" then it should return "aabbcc"
 */
 function doubleLetters(str){
-    let newString = "";
-
-    for(let i = 0 ; i < str.length; i++){
-        newString += str[i];
-        newString += str[i];
-
-    }
-
-    return newString;
+    return (str !== "") ? str.split('').reduce((acc, curr) => acc + curr + curr, "" ) : "";
 }
 
 
@@ -68,14 +56,8 @@ Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
 function doubleNumbers(arr){
-    return arr.map((number)=> number *2);
+    return arr.map((number)=> number * 2);
 }
-
-
-
-
-
-
 
 
 /*
@@ -96,11 +78,6 @@ function multiplyNumbers(arr, denominator) {
     return arr.map((number) => number * denominator);
 
 }
-
-
-
-
-
 
 
 /*
@@ -144,12 +121,11 @@ Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "
 */
 
 function createRange(number, defaultValue){
-let returnArr = [];
-for(let i = 0 ; i < number ; i++){
-returnArr.push(defaultValue);
-}
-return returnArr;
-
+    let returnArr = [];
+    for(let i = 0 ; i < number ; i++){
+        returnArr.push(defaultValue);
+    }
+    return returnArr;
 }
 
 
